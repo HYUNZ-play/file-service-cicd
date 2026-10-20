@@ -18,7 +18,7 @@ on:
         default: plan
 jobs:
   run:
-    runs-on: ububtu-24.04
+    runs-on: ubuntu-24.04
     steps:
       - name: 입력값 확인
         run: |
