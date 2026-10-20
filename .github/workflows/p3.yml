@@ -1,0 +1,29 @@
+name: p3
+on:
+  push:
+    paths:
+      - .github/workflows/p3.yml
+  workflow_dispatch:
+    inputs:
+      target:
+        description: 대상환경
+        type: string
+        default: dev
+      mode:
+        description: 실행방식
+        type: choice
+        options:
+          - plan
+          - apply
+        default: plan
+jobs:
+  run:
+    runs-on: ububtu-24.04
+    steps:
+      - name: 입력값 확인
+        run: |
+          echo "target=${{ inputs.target }}"
+          echo "mode=${{ inputs.mode }}"
+      - name: 적용 안내
+        if: inputs.mode == 'apply'
+        run: echo "실제 적용"
