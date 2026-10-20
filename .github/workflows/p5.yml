@@ -16,7 +16,7 @@ jobs:
       - name: 시작
         run: echo "시작"
       - name: 일부러 실패
-        if: input.fail
+        if: inputs.fail
         run: exit 1
       - name: 다음 단계
         run: echo "다음 단계"
