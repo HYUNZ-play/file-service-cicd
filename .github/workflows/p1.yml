@@ -8,10 +8,10 @@ jobs:
   context:
     runs-on: ubuntu-24.04
     steps:
-      -name: 실행 정보
-      run: |
-        echo "실행을 일으킨 사람: ${{ github.actor }}"
-        echo "이벤트 종류: ${{ github.event_name }}"
-        echo "브랜치 이름: ${{ github.ref_name }}"
-        echo "커밋 해시: ${{ github.sha }}"
-        echo "러너 운영체제: ${{ runner.os }}"
+      - name: 정보
+        run: |
+          echo "실행을 일으킨 사람: ${{ github.actor }}"
+          echo "이벤트 종류: ${{ github.event_name }}"
+          echo "브랜치 이름: ${{ github.ref_name }}"
+          echo "커밋 해시: ${{ github.sha }}"
+          echo "러너 운영체제: ${{ runner.os }}"
