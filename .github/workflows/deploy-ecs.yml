@@ -1,5 +1,5 @@
 # CD (1) — main 에 들어온 코드를 테스트 → 이미지(GHCR) → EC2 한 대에 SSH 로 배포
-name: deploy-ec2
+name: deploy-ecs
 
 on:
   push:
